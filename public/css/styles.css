@@ -64,6 +64,11 @@ h1 {
     width: 200px;
 }
 
+.description-rating {
+    padding-top:2px;
+    padding-bottom:2px;
+}
+
 .book-showcase img {
     width: 150px;
 }
@@ -80,10 +85,17 @@ h1 {
     padding-bottom: 4px;
 }
 
+.description-links {
+    display:flex;
+    border-bottom: 1px #FAF0E6 solid;
+    padding-bottom: 5px;
+}
+
 .description-links a {
     margin-right: 5px;
+    margin-left: 5px;
 }
 
 .book-notes {
-    padding-top: 26px;
+    padding-top: 20px;
 }

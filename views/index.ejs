@@ -14,7 +14,10 @@
         <div class="top-box">
             <div class="description-cover">
                 <img src="/images/cover_01_large.jpg">
-                <p style="padding-top:4px">My rating: ★★★★☆</p>
+                <div class="description-rating">
+                    <span>My rating:</span>
+                    <span style="color:#FB2576;">★★★★☆</span>
+                </div>
             </div>
             <div class="description">
                 <div>
@@ -38,9 +41,13 @@
                 </p>
                 <div class="description-links">
                     <a class="show_notes" href="#">show notes</a>
+                    <span>|</span>
                     <a href="#">openlibrary</a>
+                    <span>|</span>
                     <a href="#">goodreads</a>
+                    <span>|</span>
                     <a href="#">amazon</a>
+                    <a class="close_description" style="margin-left:auto;" href="#">close description box</a>
                 </div>
                 <div class="book-notes">
                     <h3>My Notes</h3>
@@ -104,9 +111,14 @@
 </body>
 
 <script>
-    $(".show_notes").click(function(){
+    $(".show_notes").click(function () {
         $(".book-notes").slideToggle();
-}); 
+    }); 
+
+    $(".close_description").click(function () {
+        $(".top-box").fadeToggle();
+    }); 
+    
 </script>
 
 </html>
