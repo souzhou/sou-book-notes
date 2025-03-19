@@ -1,9 +1,17 @@
 </div>
 </body>
 <script>
+
+$(".book-notes").hide();
+
+    // Hide notes initially
     $(".show_notes").click(function () {
         $(".book-notes").slideToggle();
     }); 
+
+    $(".book_notes").on("load", function() {
+        $(this).hide();
+    });
 
     $(".close_description").click(function () {
         $(".top-box").fadeToggle();

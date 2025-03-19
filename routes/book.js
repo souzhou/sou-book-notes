@@ -8,10 +8,12 @@ export default router;
 /* GET book page. */
 router.get('/book/:title', async function (req, res) {
     const book = await getBook(req.params['title']);
-    console.log(book);
+
     res.render('index.ejs', {
         book: book,
-        catalog : catalog
+        catalog : catalog,
+        published : new Date(book.published).getFullYear(),
+        date_read : new Date(book.date_read).toDateString()
     });
 });
 

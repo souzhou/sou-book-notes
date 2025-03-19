@@ -12,9 +12,9 @@
             <h3 style="display:inline">by <%= locals.book.author %></h3>
         </div>
         <div class="description-info">
-            <p>published: <%= locals.book.published %></p>
+            <p>published: <%= locals.published %></p>
             <p>ISBN: <%= locals.book.isbn %></p>
-            <p>Date read: <%= locals.book.date_read %></p>
+            <p>Date read: <%= locals.date_read %></p>
         </div>
         <p class="description-summary">
             <%= locals.book.summary %>
@@ -38,10 +38,10 @@
                 <a href="#">amazon</a>
             <% } %>
             <% if (locals.catalog) { %>
-                <a class="close_description" style="margin-left:auto;" href="#">close description box</a>
+                <a class="close_description" style="margin-left:auto;" href="#">close</a>
             <% } %>
             <% if (!locals.catalog) { %>
-                <a class="redirect_description" style="margin-left:auto;" href="/">close description box</a>
+                <a class="redirect_description" style="margin-left:auto;" href="/">close</a>
             <% } %>
             
         </div>
