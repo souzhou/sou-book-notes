@@ -1,0 +1,1 @@
+Book notes by sou. So far just project structure.
