@@ -1,0 +1,26 @@
+<div class="top-box-nav">
+    <% if (locals.state && state == 'form') { %>
+    <a class="save" href="#">save</a>
+    <% } %> <% if (locals.state && state == 'book') { %>
+        <a class="show_notes" href="#">show notes</a>
+        <% if (locals.book.url_openlibrary) { %>
+        <span>|</span>
+        <a href="#">openlibrary</a>
+        <% } %> <% if (locals.book.url_archive_org) { %>
+        <span>|</span>
+        <a href="#">archive.org</a>
+        <% } %> <% if (locals.book.url_goodreads) { %>
+        <span>|</span>
+        <a href="#">goodreads</a>
+        <% } %> <% if (locals.book.url_amazon) { %>
+        <span>|</span>
+        <a href="#">amazon</a>
+        <% } %>
+    <% } %>
+     
+    <% if (locals.catalog) { %>
+    <a class="close_description" style="margin-left: auto" href="#">close</a>
+    <% } %> <% if (!locals.catalog) { %>
+    <a class="redirect_description" style="margin-left: auto" href="/">close</a>
+    <% } %>
+</div>

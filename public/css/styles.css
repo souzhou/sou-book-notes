@@ -8,16 +8,6 @@ body {
     min-height: 350px;
 }
 
-/* .top-box-form {
-    display:grid;
-    grid-template-columns: 300px auto;
-} */
-
-.form-container {
-    /* width:100%; */
-    /* border: #fff 1px solid; */
-}
-
 .form-control:focus::placeholder{color:#ecdbba7e !important;}
 
 .main-box {
@@ -109,13 +99,15 @@ h1 {
     padding-bottom: 4px;
 }
 
-.description-links {
+.top-box-nav {
     display: flex;
     border-bottom: 1px #FAF0E6 solid;
     padding-bottom: 5px;
 }
 
-.description-links a {
+.top-box-nav a {
+    font-size: 18px;
+    font-weight: 400;
     margin-right: 5px;
     margin-left: 5px;
 }

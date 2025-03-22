@@ -16,26 +16,7 @@
     <p>Date read: <%= locals.date_read %></p>
   </div>
   <p class="description-summary"><%= locals.book.summary %></p>
-  <div class="description-links">
-    <a class="show_notes" href="#">show notes</a>
-    <% if (locals.book.url_openlibrary) { %>
-    <span>|</span>
-    <a href="#">openlibrary</a>
-    <% } %> <% if (locals.book.url_archive_org) { %>
-    <span>|</span>
-    <a href="#">archive.org</a>
-    <% } %> <% if (locals.book.url_goodreads) { %>
-    <span>|</span>
-    <a href="#">goodreads</a>
-    <% } %> <% if (locals.book.url_amazon) { %>
-    <span>|</span>
-    <a href="#">amazon</a>
-    <% } %> <% if (locals.catalog) { %>
-    <a class="close_description" style="margin-left: auto" href="#">close</a>
-    <% } %> <% if (!locals.catalog) { %>
-    <a class="redirect_description" style="margin-left: auto" href="/">close</a>
-    <% } %>
-  </div>
+  <%- include('./top-box-nav.ejs') %>
   <div class="book-notes">
     <h3>My Notes</h3>
     <p><%= locals.book.notes %></p>
