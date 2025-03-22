@@ -9,6 +9,19 @@ body {
     min-height: 350px;
 }
 
+.top-box-form {
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    width:70%;
+}
+
+.form-control:focus::placeholder{color:#ecdbba7e !important;}
+
 .main-box {
     display: flex;
     flex-wrap: wrap;
@@ -65,8 +78,8 @@ h1 {
 }
 
 .description-rating {
-    padding-top:2px;
-    padding-bottom:2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .book-showcase img {
@@ -86,7 +99,7 @@ h1 {
 }
 
 .description-links {
-    display:flex;
+    display: flex;
     border-bottom: 1px #FAF0E6 solid;
     padding-bottom: 5px;
 }

@@ -1,0 +1,69 @@
+<div class="form-container">
+    <form action="/add" method="post">
+        <div class="row">
+            <div class="col">
+                <div class="input-group mb-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="isbn" placeholder="9780231535090">
+                        <label for="isbn">ISBN</label>
+                    </div>
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">Find</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="title" placeholder="Frontier Within">
+                    <label for="title">Book title</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="author" placeholder="Kobo Abe">
+                    <label for="title">Author</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="published" placeholder="2013">
+                    <label for="title">Year published</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="url_openlibrary" placeholder="OL7924103W">
+                    <label for="url_openlibrary">Open Library (Optional)</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="url_goodreads" placeholder="17070578">
+                    <label for="title">Goodreads (Optional)</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="url_amazon" placeholder="B00APDGI80">
+                    <label for="title">Amazon (Optional)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="The book is about..." id="notes"
+                style="height: 100px"></textarea>
+            <label for="notes">Description</label>
+        </div>
+        
+        <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="The main character is a douchebag because..." id="notes"
+                style="height: 100px"></textarea>
+            <label for="notes">Notes</label>
+        </div>
+
+    </form>
+</div>

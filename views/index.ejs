@@ -1,19 +1,16 @@
 <%- include('partials/header') %>
-<div style="width:100%;text-align:center;">
-    <a href="/"><h1>Book notes by sou</h1></a>
-    <% if (!locals.book) { %>
-    <p style="font-size: 20px;">Hey! I'm sou and this is a catalog of my read books. 
-        The books include general information, a small description and some notes, that i wrote down while reading. 
-        You can check back every few months since the collection will periodically be updated.
-        At this moment the site is still under construction so all there is to see is filler text and images. Come back later!</p>
-    <% } %>
+<div style="width: 100%; text-align: center">
+  <a href="/"><h1>Book notes by sou</h1></a>
+  <% if (!locals.book) { %>
+  <p style="font-size: 20px">
+    Hey! I'm sou and this is a catalog of my read books. The books include
+    general information, a small description and some notes, that i wrote down
+    while reading. You can check back every few months since the collection will
+    periodically be updated. At this moment the site is still under construction
+    so all there is to see is filler text and images. Come back later!
+  </p>
+  <% } %>
 </div>
-<% if (locals.book) { %>
-    <%- include('partials/top-box') %>
-<% } %>
-
-<% if (locals.catalog) { %>
-    <%- include('partials/main-box') %>
-<% } %>
-
-<%- include('partials/footer') %>
+<% if (locals.book) { %> <%- include('partials/top-box-book') %> <% } %> <% if
+(locals.catalog) { %> <%- include('partials/main-box') %> <% } %> <%-
+include('partials/footer') %>
