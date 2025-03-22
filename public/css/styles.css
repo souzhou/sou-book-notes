@@ -36,6 +36,7 @@ p {
 
 a {
     color: #FB2576;
+    text-decoration: none;
 }
 
 a:hover {

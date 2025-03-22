@@ -1,0 +1,9 @@
+<div class="top-box">
+  <% if (locals.state && state == 'book') { %>
+    <%- include('./book.ejs') %>
+  <% } %>
+       
+  <% if (locals.state && state == 'form') { %>
+    <%- include('./form.ejs') %>
+  <% } %>
+</div>

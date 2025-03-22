@@ -7,7 +7,8 @@ export default router;
 
 /* GET book page. */
 router.get("/add", function (req, res) {
-  res.render("add.ejs", {
+  res.render("index.ejs", {
+    state : 'form',
     catalog: catalog,
   });
 });

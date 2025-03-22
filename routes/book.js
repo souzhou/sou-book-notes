@@ -10,6 +10,7 @@ router.get('/book/:title', async function (req, res) {
     const book = await getBook(req.params['title']);
 
     res.render('index.ejs', {
+        state: 'book',
         book: book,
         catalog : catalog,
         published : new Date(book.published).getFullYear(),
