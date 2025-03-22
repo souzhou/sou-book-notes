@@ -11,6 +11,8 @@
   </p>
   <% } %>
 </div>
-<%- include('partials/top-box') %>
+<% if (locals.state) { %>
+  <%- include('partials/top-box') %>
+<% } %>
 <% if (locals.catalog) { %> <%- include('partials/main-box') %> <% } %> <%-
 include('partials/footer') %>
