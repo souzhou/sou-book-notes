@@ -5,19 +5,17 @@ body {
 
 .top-box {
     /* border: #FFF solid 1px; */
-    width: 100%;
     min-height: 350px;
 }
 
-.top-box-form {
-    width: 100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
+/* .top-box-form {
+    display:grid;
+    grid-template-columns: 300px auto;
+} */
 
 .form-container {
-    width:70%;
+    /* width:100%; */
+    /* border: #fff 1px solid; */
 }
 
 .form-control:focus::placeholder{color:#ecdbba7e !important;}
@@ -69,6 +67,18 @@ h1 {
 
 .description-cover {
     border: #ECDBBA 2px solid;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+}
+
+.form-cover img {
+    height: 420px;
+    max-width:265px;
+}
+
+.form-cover {
+    /* border: #ECDBBA 2px solid; */
     text-align: center;
     float: left;
     margin-right: 10px;

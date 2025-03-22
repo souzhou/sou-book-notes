@@ -1,4 +1,4 @@
-<div class="main-box">
+<div class="main-box container-fluid">
     <% locals.catalog.forEach(entry => { %>
         <div class="book-showcase">
             <a href="/book/<%= entry.get_param %>"><img class="cover-image rounded" href="/" src="/images/covers/<%= entry.cover_image_title %>_medium.jpg" alt="cover-01"></a>
