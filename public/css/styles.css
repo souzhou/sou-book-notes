@@ -15,6 +15,13 @@ body {
     flex-wrap: wrap;
     gap: 20px 22px;
     padding-top: 20px;
+    margin-bottom: 80px;
+}
+
+.rating {
+    color: #fb2576;
+    font-size: 22px;
+    cursor:default;
 }
 
 p {
@@ -25,6 +32,10 @@ p {
 a {
     color: #FB2576;
     text-decoration: none;
+}
+
+.page-title {
+    margin-bottom: 20px;
 }
 
 a:hover {
@@ -56,7 +67,6 @@ h1 {
 }
 
 .description-cover {
-    border: #ECDBBA 2px solid;
     text-align: center;
     float: left;
     margin-right: 10px;
@@ -76,11 +86,6 @@ h1 {
 
 .description-cover img {
     width: 200px;
-}
-
-.description-rating {
-    padding-top: 2px;
-    padding-bottom: 2px;
 }
 
 .book-showcase img {
@@ -115,3 +120,48 @@ h1 {
 .book-notes {
     padding-top: 20px;
 }
+
+.star-rating {
+    background-color: #000;
+    --size: 36px;
+    --mask: conic-gradient(from -18deg at 61% 34.5%, #0000 108deg, #000 0) 0 / var(--size),
+        conic-gradient(from 270deg at 39% 34.5%, #0000 108deg, #000 0) 0 / var(--size),
+        conic-gradient(from 54deg at 68% 56%, #0000 108deg, #000 0) 0 / var(--size),
+        conic-gradient(from 198deg at 32% 56%, #0000 108deg, #000 0) 0 / var(--size),
+        conic-gradient(from 126deg at 50% 69%, #0000 108deg, #000 0) 0 / var(--size);
+    --bg: linear-gradient(90deg, #fb2576 calc(var(--size) * var(--val)), #ddd 0);
+    height: var(--size);
+    width: calc(var(--size) * 5);
+    border: 0; /* Firefox adds a default border to ranges */
+    -webkit-appearance: none;
+    appearance: none;
+    
+    /* Chrome and Safari */
+    &::-webkit-slider-runnable-track {
+      height: 100%;
+      mask: var(--mask);
+      mask-composite: intersect;
+      background: var(--bg);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    
+    &::-webkit-slider-thumb {
+      opacity: 0;
+    }
+    
+    /* Firefox */
+    &::-moz-range-track {
+      height: 100%;
+      mask: var(--mask);
+      mask-composite: intersect;
+      background: var(--bg);
+      print-color-adjust: exact;
+    }
+    
+    &::-moz-range-thumb {
+      opacity: 0;
+    }
+  }
+  
+  

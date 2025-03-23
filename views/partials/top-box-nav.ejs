@@ -1,6 +1,6 @@
 <div class="top-box-nav">
     <% if (locals.state && state == 'form') { %>
-    <a class="save" href="#">save</a>
+    <a href="#" onclick="submitForm()">save</a>
     <% } %> <% if (locals.state && state == 'book') { %>
         <a class="show_notes" href="#">show notes</a>
         <% if (locals.book.url_openlibrary) { %>

@@ -1,13 +1,11 @@
-<div class="row">
-    <div class="form-cover col-xl-3 col-lg-4 col-sm-12">
-        <img src="/images/covers/cover_01_large.jpg" />
-        <div class="description-rating">
-            <span>Set rating:</span>
-            <span style="color: #fb2576">★★★★☆</span>
+<form id="form" action="/add" method="POST">
+    <div class="row">
+        <div class="form-cover col-xl-3 col-lg-4 col-sm-12">
+            <img src="/images/covers/cover_01_large.jpg" />
+            <input type="range" min="0.5" max="5" step="0.5" value="0.5" class="star-rating mt-2" style="--val: 0.5"
+                oninput="this.style='--val:'+this.value">
         </div>
-    </div>
-    <div class="col">
-        <form action="/add" method="post">
+        <div class="col">
             <div class="row">
                 <div class="col">
                     <div class="input-group mb-3">
@@ -15,12 +13,12 @@
                             <input type="text" class="form-control" id="isbn" placeholder="9780231535090">
                             <label for="isbn">ISBN</label>
                         </div>
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">Find</button>
+                        <button class="btn btn-outline-secondary" type="button" id="isbn_find">Find</button>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="title" placeholder="Frontier Within">
+                        <input type="text" class="form-control" id="title" placeholder="Frontier Within" required>
                         <label for="title">Book title</label>
                     </div>
                 </div>
@@ -28,13 +26,13 @@
             <div class="row">
                 <div class="col">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="author" placeholder="Kobo Abe">
+                        <input type="text" class="form-control" id="author" placeholder="Kobo Abe" required>
                         <label for="title">Author</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="published" placeholder="2013">
+                        <input type="number" class="form-control" id="published" placeholder="2013">
                         <label for="title">Year published</label>
                     </div>
                 </div>
@@ -60,18 +58,21 @@
                 </div>
             </div>
             <div class="form-floating mb-3">
-                <textarea class="form-control" placeholder="The book is about..." id="notes"
-                    style="height: 100px"></textarea>
+                <textarea class="form-control" placeholder="The book is about..." id="notes" style="height: 100px"
+                    required></textarea>
                 <label for="notes">Description</label>
             </div>
             <div class="form-floating mb-1">
                 <textarea class="form-control" placeholder="The main character is a douchebag because..." id="notes"
-                    style="height: 100px"></textarea>
+                    style="height: 100px" required></textarea>
                 <label for="notes">Notes</label>
             </div>
-        </form>
-        <div class="col-12">
-            <%- include('./top-box-nav.ejs') %>
+            <input type="number" class="form-control" id="rating" steps="0.5" value="0" hidden>
+            <button id="hiddenSubmitButton" type="submit" style="display: none;">Submit</button> <!-- Hidden button -->
+            <div class="col-12">
+                <%- include('./top-box-nav.ejs') %>
+            </div>
+
         </div>
     </div>
-</div>
+</form>
