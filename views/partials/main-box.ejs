@@ -1,32 +1,43 @@
-<div class="main-box container-fluid">
-    <% locals.catalog.forEach(entry => { %>
-        <div class="book-showcase">
-            <a href="/book/<%= entry.get_param %>"><img class="cover-image rounded" href="/" src="/images/covers/<%= entry.cover_image_title %>_medium.jpg" alt="cover-01"></a>
-        </div>
-    <% }) %>
+<div class="container-fluid" style="display: flex; justify-content: center;">
+    <div class="main-box d-flex flex-wrap">
+        <% locals.catalog.forEach(entry=> { %>
+            <div class="book-showcase">
+                <a href="/book/<%= entry.get_param %>"><img class="cover-image rounded" href="/"
+                        src="/images/covers/<%= entry.cover_image_title %>_medium.jpg" alt="cover-01"></a>
+            </div>
+            <% }) %>
 
-    <div class="book-showcase">
-        <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_02_medium.jpg" alt="cover-01"></a>
-    </div>
-    <div class="book-showcase">
-        <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_03_medium.jpg" alt="cover-01"></a>
-    </div>
-    <div class="book-showcase">
-        <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_04_medium.jpg" alt="cover-01"></a>
-    </div>
-    <div class="book-showcase">
-        <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_05_medium.jpg" alt="cover-01"></a>
-    </div>
-    <div class="book-showcase">
-        <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_06_medium.jpg" alt="cover-01"></a>
-    </div>
-    <div class="book-showcase">
-        <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_07_medium.jpg" alt="cover-01"></a>
-    </div>
-    <div class="book-showcase">
-        <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_08_medium.jpg" alt="cover-01"></a>
-    </div>
-    <div class="book-showcase">
-        <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_09_medium.jpg" alt="cover-01"></a>
+                <div class="book-showcase">
+                    <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_02_medium.jpg"
+                            alt="cover-01"></a>
+                </div>
+                <div class="book-showcase">
+                    <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_03_medium.jpg"
+                            alt="cover-01"></a>
+                </div>
+                <div class="book-showcase">
+                    <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_04_medium.jpg"
+                            alt="cover-01"></a>
+                </div>
+                <div class="book-showcase">
+                    <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_05_medium.jpg"
+                            alt="cover-01"></a>
+                </div>
+                <div class="book-showcase">
+                    <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_06_medium.jpg"
+                            alt="cover-01"></a>
+                </div>
+                <div class="book-showcase">
+                    <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_07_medium.jpg"
+                            alt="cover-01"></a>
+                </div>
+                <div class="book-showcase">
+                    <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_08_medium.jpg"
+                            alt="cover-01"></a>
+                </div>
+                <div class="book-showcase">
+                    <a href=#><img class="cover-image rounded" href="/" src="/images/covers/cover_09_medium.jpg"
+                            alt="cover-01"></a>
+                </div>
     </div>
 </div>

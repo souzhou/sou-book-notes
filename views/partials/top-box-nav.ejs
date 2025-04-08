@@ -1,26 +1,22 @@
 <div class="top-box-nav">
     <% if (locals.state && state == 'form') { %>
-    <a href="#" onclick="submitForm()">save</a>
+    <a href="#" class="save-btn" class="save-btn">save</a>
     <% } %> <% if (locals.state && state == 'book') { %>
-        <a class="show-notes" href="#">show notes</a>
+        <a class="show-notes" href="javascript:void(0)">show notes</a>
         <% if (locals.book.url_openlibrary) { %>
-        <span>|</span>
         <a href="#">openlibrary</a>
         <% } %> <% if (locals.book.url_archive_org) { %>
-        <span>|</span>
         <a href="#">archive.org</a>
         <% } %> <% if (locals.book.url_goodreads) { %>
-        <span>|</span>
         <a href="#">goodreads</a>
         <% } %> <% if (locals.book.url_amazon) { %>
-        <span>|</span>
         <a href="#">amazon</a>
         <% } %>
     <% } %>
      
     <% if (locals.catalog) { %>
-    <a class="close-description" style="margin-left: auto" href="#">close</a>
+    <a class="close-description" style="margin-left: auto; margin-right:0px;" href="#">close</a>
     <% } %> <% if (!locals.catalog) { %>
-    <a class="redirect-description" style="margin-left: auto" href="/">close</a>
+    <a class="redirect-description" style="margin-left: auto; margin-right:0px;" href="/">close</a>
     <% } %>
 </div>

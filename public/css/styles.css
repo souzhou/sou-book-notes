@@ -4,26 +4,12 @@ body {
 }
 
 .top-box {
-    /* border: #FFF solid 1px; */
     min-height: 350px;
 }
 
-.form-control:focus::placeholder{color:#ecdbba7e !important;}
 
-.main-box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px 22px;
-    padding-top: 20px;
-    margin-bottom: 80px;
-}
 
-.rating {
-    color: #fb2576;
-    font-size: 22px;
-    cursor:default;
-}
-
+/* basics */
 p {
     padding: 0px;
     margin: 0px;
@@ -34,21 +20,25 @@ a {
     text-decoration: none;
 }
 
-.page-title {
-    margin-bottom: 20px;
-}
-
 a:hover {
     color: #ECDBBA;
     text-decoration: none;
 }
 
+.page-title {
+    margin-bottom: 20px;
+}
 
 h1 {
     text-align: center;
     width: 100%;
     padding: 10px;
     color: #FB2576;
+}
+
+/* book showcase */
+.book-showcase img {
+    width: 150px;
 }
 
 .book-showcase:hover {
@@ -66,31 +56,44 @@ h1 {
     }
 }
 
-.description-cover {
-    text-align: center;
-    float: left;
-    margin-right: 10px;
-}
 
+/* form */
 .form-cover img {
     height: 420px;
-    max-width:265px;
+    width: 265px;
 }
 
 .form-cover {
-    /* border: #ECDBBA 2px solid; */
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 32px;
+}
+
+.form-cover-inner-container {
+    width: 265px;
+}
+
+.form-cover-rating {
+    text-align: center;
+}
+
+/* description */
+.description-cover {
     text-align: center;
     float: left;
-    margin-right: 10px;
+    margin-right: 32px;
 }
 
 .description-cover img {
     width: 200px;
 }
 
-.book-showcase img {
-    width: 150px;
+.rating {
+    color: #fb2576;
+    font-size: 22px;
+    cursor: default;
 }
+
 
 .description-info p {
     display: inline;
@@ -104,6 +107,7 @@ h1 {
     padding-bottom: 4px;
 }
 
+/* top box general  */
 .top-box-nav {
     display: flex;
     border-bottom: 1px #FAF0E6 solid;
@@ -113,16 +117,22 @@ h1 {
 .top-box-nav a {
     font-size: 20px;
     font-weight: 600;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 30px;
 }
 
+/* book notes */
 .book-notes {
     padding-top: 20px;
 }
 
+/* image picker */
 .image-picker:hover {
     cursor: pointer;
+}
+
+/* rating slider in the form */
+.form-control:focus::placeholder {
+    color: #ecdbba7e !important;
 }
 
 .rating-slider {
@@ -136,36 +146,77 @@ h1 {
     --bg: linear-gradient(90deg, #fb2576 calc(var(--size) * var(--val)), #ddd 0);
     height: var(--size);
     width: calc(var(--size) * 5);
-    border: 0; /* Firefox adds a default border to ranges */
+    border: 0;
+    /* Firefox adds a default border to ranges */
     -webkit-appearance: none;
     appearance: none;
-    
+
     /* Chrome and Safari */
     &::-webkit-slider-runnable-track {
-      height: 100%;
-      mask: var(--mask);
-      mask-composite: intersect;
-      background: var(--bg);
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
+        height: 100%;
+        mask: var(--mask);
+        mask-composite: intersect;
+        background: var(--bg);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
-    
+
     &::-webkit-slider-thumb {
-      opacity: 0;
+        opacity: 0;
     }
-    
+
     /* Firefox */
     &::-moz-range-track {
-      height: 100%;
-      mask: var(--mask);
-      mask-composite: intersect;
-      background: var(--bg);
-      print-color-adjust: exact;
+        height: 100%;
+        mask: var(--mask);
+        mask-composite: intersect;
+        background: var(--bg);
+        print-color-adjust: exact;
     }
-    
+
     &::-moz-range-thumb {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  
-  
+}
+
+/* responsivness */
+@media (max-width: 600px) {
+    .main-box {
+        justify-content: space-evenly;
+        gap: 0px 0px;
+        padding-top: 20px;
+        margin-bottom: 80px;
+    }
+}
+
+
+@media (min-width: 600px) {
+    .main-box {
+        justify-content: flex-start;
+        gap: 32px 20px;
+        padding-top: 20px;
+        margin-bottom: 80px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-box {
+        justify-content: flex-start;
+        gap: 32px 40px;
+        padding-top: 20px;
+        margin-bottom: 80px;
+    }
+
+    .form-cover {
+        max-width: 265px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-box {
+        justify-content: flex-start;
+        gap: 32px 37px;
+        padding-top: 20px;
+        margin-bottom: 80px;
+    }
+}
