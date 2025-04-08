@@ -6,17 +6,47 @@
   $(".book-notes").hide();
 
   // Hide notes initially
-  $(".show_notes").click(function () {
+  $(".show-notes").click(function () {
     $(".book-notes").slideToggle();
   });
 
-  $(".book_notes").on("load", function () {
+  $(".book-notes").on("load", function () {
     $(this).hide();
   });
 
-  $(".close_description").click(function () {
+  $(".close-description").click(function () {
     $(".top-box").fadeToggle();
   });
+
+  $(".image-picker").click(function () {
+    $('.hidden-image-picker').click();
+  })
+
+  $(".hidden-image-picker").on("input", function (event) {
+
+    console.log("input triggered");
+    console.log(event.target.files[0]);
+    const file = event.target.files[0];
+
+    if (file && file.type.startsWith('image/')) {
+      console.log('valid image received');
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        // Set the image source to the FileReader result
+        $('.image-picker').attr('src', e.target.result);
+      };
+      // Read the file as a data URL
+      reader.readAsDataURL(file);
+    }
+    else {
+      alert('please select a valid image file');
+    }
+
+  });
+
+
+
 </script>
 
 </html>

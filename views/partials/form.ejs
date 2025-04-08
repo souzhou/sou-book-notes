@@ -1,8 +1,8 @@
 <form id="form" action="/add" method="POST">
     <div class="row">
         <div class="form-cover col-xl-3 col-lg-4 col-sm-12">
-            <img src="/images/covers/cover_01_large.jpg" />
-            <input type="range" min="0.5" max="5" step="0.5" value="0.5" class="star-rating mt-2" style="--val: 0.5"
+            <img class="image-picker" src="/images/covers/cover_placeholder_large.png" />
+            <input type="range" min="0.5" max="5" step="0.5" value="0.5" class="rating-slider mt-2" style="--val: 0.5"
                 oninput="this.style='--val:'+this.value">
         </div>
         <div class="col">
@@ -67,12 +67,11 @@
                     style="height: 100px" required></textarea>
                 <label for="notes">Notes</label>
             </div>
-            <input type="number" class="form-control" id="rating" steps="0.5" value="0" hidden>
-            <button id="hiddenSubmitButton" type="submit" style="display: none;">Submit</button> <!-- Hidden button -->
+            <input class="hidden-image-picker" type="file" accept="image/*" style="display: none;"/>
+            <button class="hidden-submit-button" type="submit" style="display: none;">Submit</button> <!-- Hidden button -->
             <div class="col-12">
                 <%- include('./top-box-nav.ejs') %>
             </div>
-
         </div>
     </div>
-</form>
+    </form>

@@ -111,8 +111,8 @@ h1 {
 }
 
 .top-box-nav a {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 600;
     margin-right: 5px;
     margin-left: 5px;
 }
@@ -121,7 +121,11 @@ h1 {
     padding-top: 20px;
 }
 
-.star-rating {
+.image-picker:hover {
+    cursor: pointer;
+}
+
+.rating-slider {
     background-color: #000;
     --size: 36px;
     --mask: conic-gradient(from -18deg at 61% 34.5%, #0000 108deg, #000 0) 0 / var(--size),
